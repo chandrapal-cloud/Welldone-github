@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welldone</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlEDKx9rQe1v8W/K/B02u2z5f9z/xT9/r+P6pBv6g5X9+n7I3i3B06r9fE5+j4M8P+1Q4G6S+q4xQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Tailwind configuration to extend default theme or add plugins -->
+    <script>
+        // Cache-busting comment: 2024-07-29T16:00:00Z
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode based on class
+            theme: {
+                extend: {
+                    colors: {
+                        // Dynamic Theme Colors using CSS Variables
+                        'primary-teal': 'var(--color-primary)',    
+                        'secondary-mint': 'var(--color-secondary)',  
+                        'accent-sky': 'var(--color-accent)',      
+                        'primary-teal-dark': 'var(--color-primary-dark)',
+                        'secondary-mint-dark': 'var(--color-secondary-dark)',
+                        'accent-sky-dark': 'var(--color-accent-dark)',
+
+                        // Base Colors
+                        'light-background': '#F3F2EF', 
+                        'dark-text': '#263238',       
+                        'text-base': '#4A4A4A',       
+
+                        // Fixed Brand Palette (for specific branding needs independent of theme)
+                        'brand-pink': '#F6B1CE',
+                        'brand-blue': '#0a66c2', 
+                        'brand-teal': '#3DB6B1',
+                        'brand-mint': '#CCE5CF',
+
+                        // Dark Mode Colors
+                        'dark-mode-bg': '#1a1a2e',      
+                        'dark-mode-card-bg': '#1f4068', 
+                        'dark-mode-input-bg': '#162447',
+                        'dark-mode-text': '#e0e0e0',    
+                        'dark-mode-text-base': '#a4a9b3',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0?dev",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?dev&deps=react@18.2.0,react-dom@18.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-light-background dark:bg-dark-mode-bg font-sans antialiased text-text-base dark:text-dark-mode-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
